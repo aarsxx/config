@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+xrandr -s 2560x1080
+
+backg_name="$(cat ~/Pictures/kitty.txt)"
+
+magick "${HOME}/Pictures/${backg_name}" \
+    -brightness-contrast "-25x-30" \
+    ~/backg.png
+    #-resize "1300x750" \
